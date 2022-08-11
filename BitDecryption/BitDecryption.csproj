@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Copyright>© Ing. Punzenberger COPA-DATA GmbH</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="BitDecryption.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>
