@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6K19fhGT5T074l0oR39EaXTvCCRQ5PdPhfikNiQ9W4ORppp5oBcYBSjlS9Uc9qpy98YjEZSSZNDKU5fEupu0ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas.Walkner\\source\\Statusbits_final\\Statusbits\\Statusbits\\Statusbits.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas.Walkner\\.nuget\\packages\\sharpclipboard\\3.5.2\\sharpclipboard.3.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,52 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Statusbits/1.0.0": {
+        "dependencies": {
+          "BitDecryption": "1.0.0",
+          "SharpClipboard": "3.5.2"
+        },
+        "runtime": {
+          "Statusbits.dll": {}
+        }
+      },
+      "SharpClipboard/3.5.2": {
+        "runtime": {
+          "lib/netcoreapp3.0/SharpClipboard.dll": {
+            "assemblyVersion": "3.5.2.0",
+            "fileVersion": "3.5.2.0"
+          }
+        }
+      },
+      "BitDecryption/1.0.0": {
+        "runtime": {
+          "BitDecryption.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Statusbits/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpClipboard/3.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FdH8/Rd+xDLwnj7CgeQAZb/EuPGzSXNxfE1SOr2I1XbWB6pANhYvTsc70GYelXWZHBGlct2p+PJK/AETTbkHjQ==",
+      "path": "sharpclipboard/3.5.2",
+      "hashPath": "sharpclipboard.3.5.2.nupkg.sha512"
+    },
+    "BitDecryption/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
