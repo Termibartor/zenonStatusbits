@@ -11,10 +11,6 @@
 
 Das ursprüngliche Programm wurde in "Lua" geschrieben. Um ein besser wartbares System zu haben wurde das Programm in "C#" übersetzt. Es dient dazu von einem Dezimal-, Hexadezimal- oder Binärwert die gesetzten Bits abzufragen und so den Status besser dargestellt zu bekommen.
 
-
-<img src="./Assets/ReadMe_overview.PNG"/>
-
-
 ## __Funktion__
 
 In dem "Scan From Clipboard" Auswahlfeld kann zwischen den Optionen "no", "hexadecimal", "decimal" und "binary" ausgewählt werden. Über die zwei Buttons neben dem Auswahlfeld können die Bits umgestellt werden. 
@@ -54,15 +50,3 @@ In der "StatusbitsModel.cs" Klasse werden alle Variablen gespeichert und bereitg
 *__MainPage.xaml.cs__*
 
 Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse wird benutzt um die Eingaben des Benutzers an den Controller weiterzuleiten.
-
-
-## __Problem__
-
-UWP-Apps lassen sich nicht als ".exe" starten. Sie werden als App im Startmenü hinzugefügt und sind darüber startbar.
-Ein weiteres Problem stellt das Clipboard dar. Wenn die App im Hintergrund ausgeführt und die Zwischenablage aktualisiert wird stürzt die App ab. Das Programm muss im Vordergrund laufen.
-
-
-Weiterführende Links: 
-+ <https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.clipboard?view=winrt-20348#remarks>
-+ <https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
-+ <https://stackoverflow.com/questions/58660743/uwp-app-crashes-when-clipboard-getcontent-is-called-from-inside-onnavigatedto>
