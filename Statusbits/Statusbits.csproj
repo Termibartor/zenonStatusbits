@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Statusbits_remake\Statusbits_remake\BitDecryption\BitDecryption.csproj" />
-  </ItemGroup>
+		<ProjectReference Include="..\BitDecryption\BitDecryption.csproj" />
+	</ItemGroup>
 
   <ItemGroup>
     <Compile Update="Strings\Resources_de.Designer.cs">
@@ -31,6 +31,21 @@
     <EmbeddedResource Update="Strings\Resources_de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources_de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Version\1600.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Version\1500.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Version\1400.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Version\1200.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Version\1100.resx">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
 

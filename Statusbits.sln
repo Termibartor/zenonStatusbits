@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statusbits", "Statusbits\Statusbits.csproj", "{9FC46329-1687-405C-9840-9F473ADD2C83}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitDecryption", "..\..\Statusbits_remake\Statusbits_remake\BitDecryption\BitDecryption.csproj", "{D84A6F58-43AF-43CA-829E-1C19F1A65730}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitDecryption", "BitDecryption\BitDecryption.csproj", "{D711EAAE-8029-2EDC-5145-69860F560B8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{9FC46329-1687-405C-9840-9F473ADD2C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FC46329-1687-405C-9840-9F473ADD2C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FC46329-1687-405C-9840-9F473ADD2C83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D84A6F58-43AF-43CA-829E-1C19F1A65730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D84A6F58-43AF-43CA-829E-1C19F1A65730}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D84A6F58-43AF-43CA-829E-1C19F1A65730}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D84A6F58-43AF-43CA-829E-1C19F1A65730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D711EAAE-8029-2EDC-5145-69860F560B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D711EAAE-8029-2EDC-5145-69860F560B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D711EAAE-8029-2EDC-5145-69860F560B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D711EAAE-8029-2EDC-5145-69860F560B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
