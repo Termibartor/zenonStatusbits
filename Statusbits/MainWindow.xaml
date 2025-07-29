@@ -7,44 +7,49 @@
         mc:Ignorable="d"
         Title="Statusbits" Height="815" Width="1190" ResizeMode="CanMinimize">
 
-    <Window.Resources>
-        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightBlue"/>
-    </Window.Resources>
+  <Window.Resources>
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightBlue"/>
+  </Window.Resources>
 
-    <Grid>
-        <DockPanel>
-            <Menu DockPanel.Dock="Top"
+  <Grid>
+    <DockPanel>
+      <Menu DockPanel.Dock="Top"
                   HorizontalAlignment="Left" 
                   VerticalAlignment="Top" 
                   Background="White">
-                <MenuItem Header="{Binding Model.Language_Resources}">
-                    <MenuItem Header="English" Click="en_OnClick"/>
-                    <MenuItem Header="Deutsch" Click="de_OnClick"/>
-                </MenuItem>
-                <MenuItem Header="{Binding Model.Version_Resources}">
-                    <MenuItem Header="v1000" Click="V1000_OnClick"/>
-                    <MenuItem Header="v820" Click="V820_OnClick"/>
-                    <MenuItem Header="v810" Click="V810_OnClick"/>
-                    <MenuItem Header="v800" Click="V800_OnClick"/>
-                    <MenuItem Header="v760" Click="V760_OnClick"/>
-                    <MenuItem Header="v750" Click="V750_OnClick"/>
-                </MenuItem>
-            </Menu>
-            <TextBox AcceptsReturn="True" />
-        </DockPanel>
+        <MenuItem Header="{Binding Model.Language_Resources}">
+          <MenuItem Header="English" Click="en_OnClick"/>
+          <MenuItem Header="Deutsch" Click="de_OnClick"/>
+        </MenuItem>
+        <MenuItem Header="{Binding Model.Version_Resources}">
+          <MenuItem Header="v1600" Click="V1600_OnClick"/>
+          <MenuItem Header="v1500" Click="V1500_OnClick"/>
+          <MenuItem Header="v1400" Click="V1400_OnClick"/>
+          <MenuItem Header="v1200" Click="V1200_OnClick"/>
+          <MenuItem Header="v1100" Click="V1100_OnClick"/>
+          <MenuItem Header="v1000" Click="V1000_OnClick"/>
+          <MenuItem Header="v820" Click="V820_OnClick"/>
+          <MenuItem Header="v810" Click="V810_OnClick"/>
+          <MenuItem Header="v800" Click="V800_OnClick"/>
+          <MenuItem Header="v760" Click="V760_OnClick"/>
+          <MenuItem Header="v750" Click="V750_OnClick"/>
+        </MenuItem>
+      </Menu>
+      <TextBox AcceptsReturn="True" />
+    </DockPanel>
 
 
 
-        <StackPanel Margin="0,80,20,650">
-            <TextBox Text="{Binding Model.ScanClipboard_Resources}" 
+    <StackPanel Margin="0,80,20,650">
+      <TextBox Text="{Binding Model.ScanClipboard_Resources}" 
                       BorderThickness="0"
                       IsReadOnly="True"
                       FontFamily="Consolas"
                       Margin="-910,-70,0,0" 
                       Width="200"
                       Height="32">
-            </TextBox>
-            <ComboBox Name="ClipboardType"
+      </TextBox>
+      <ComboBox Name="ClipboardType"
                       Width="200"
                       Height="25"
                       Margin="-910,-33,0,0"
@@ -53,26 +58,26 @@
                       SelectedIndex="0" 
                       SelectionChanged="ClipboardType_OnSelectionChanged"/>
 
-            <RadioButton x:Name="Bit64" FontFamily="Consolas" Content="64 Bit" Margin="-470,-33,0,0" VerticalAlignment="Top" Height="30" Width="75" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="75"/>
-            <RadioButton x:Name="Bit32" FontFamily="Consolas" Content="32 Bit" Margin="-300,-33,0,0" VerticalAlignment="Top" Height="30" Width="75" Checked="Bit32_OnChecked" MinWidth="75"/>
-            <TextBox Text="version: " 
+      <RadioButton x:Name="Bit64" FontFamily="Consolas" Content="64 Bit" Margin="-470,-33,0,0" VerticalAlignment="Top" Height="30" Width="75" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="75"/>
+      <RadioButton x:Name="Bit32" FontFamily="Consolas" Content="32 Bit" Margin="-300,-33,0,0" VerticalAlignment="Top" Height="30" Width="75" Checked="Bit32_OnChecked" MinWidth="75"/>
+      <TextBox Text="version: " 
                Width="70"
                BorderThickness="0"
                IsReadOnly="True"
                FontFamily="Consolas"
                Margin="660,-32,0,0"></TextBox>
-            <TextBox Text="{Binding Model.Version}" 
+      <TextBox Text="{Binding Model.Version}" 
                       BorderThickness="0"
                       IsReadOnly="True"
                       FontFamily="Consolas"
                       Margin="910,-32,0,0" 
                       Width="200"
                       Height="32">
-            </TextBox>
-        </StackPanel>
+      </TextBox>
+    </StackPanel>
 
-        <StackPanel Margin="20,90,20,170">
-            <ListView Height="258"
+    <StackPanel Margin="20,90,20,170">
+      <ListView Height="258"
                       Width="282"
                       Name="ActiveBits8"
                       HorizontalAlignment="Left"
@@ -80,29 +85,29 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits8}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"></Setter>
-                        <Setter Property="MinHeight" Value="31"></Setter>
-                        <Setter Property="MaxHeight" Value="31"></Setter>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.ItemContainerStyle>
+          <Style TargetType="ListViewItem">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"></Setter>
+            <Setter Property="MinHeight" Value="31"></Setter>
+            <Setter Property="MaxHeight" Value="31"></Setter>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="0,-8,0,0"
                       x:Name="ActiveBits7"
@@ -111,29 +116,29 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits7}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="282,-759,0,0"
                       x:Name="ActiveBits6"
@@ -142,35 +147,35 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits6}">
-                <ListView.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FFBFCDDB" Offset="1"/>
-                    </LinearGradientBrush>
-                </ListView.BorderBrush>
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.BorderBrush>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFBFCDDB" Offset="1"/>
+          </LinearGradientBrush>
+        </ListView.BorderBrush>
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="282,-258,0,0"
                       x:Name="ActiveBits5"
@@ -179,29 +184,29 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits5}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="564,-759,0,0"
                       x:Name="ActiveBits4"
@@ -210,29 +215,29 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits4}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="564,-258,0,0"
                       x:Name="ActiveBits3"
@@ -241,29 +246,29 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits3}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="846,-759,0,0"
                       x:Name="ActiveBits2"
@@ -272,29 +277,29 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits2}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <ListView Height="258"
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+      <ListView Height="258"
                       Width="282"
                       Margin="846,-258,0,0"
                       x:Name="ActiveBits1"
@@ -303,35 +308,35 @@
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       BorderThickness="0"
                       ItemsSource="{Binding Model.StatusBits1}">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="true">
-                                            <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="MinWidth" Value="250"/>
-                        <Setter Property="MinHeight" Value="31"/>
-                        <Setter Property="MaxHeight" Value="31"/>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
+        <ListView.ItemContainerStyle>
+          <Style TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                  <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                    <ContentPresenter />
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                      <Setter TargetName="Border" Property="Background"  Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Setter Property="MinWidth" Value="250"/>
+            <Setter Property="MinHeight" Value="31"/>
+            <Setter Property="MaxHeight" Value="31"/>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
 
 
-        </StackPanel>
+    </StackPanel>
 
-        <StackPanel Margin="20,636,20,0">
-            <TextBlock Text="{Binding Model.Dec_Resources}" FontFamily="Consolas" Margin="0,10,0,0"/>
-            <TextBox Text="{Binding Model.Values[0]}" 
+    <StackPanel Margin="20,636,20,0">
+      <TextBlock Text="{Binding Model.Dec_Resources}" FontFamily="Consolas" Margin="0,10,0,0"/>
+      <TextBox Text="{Binding Model.Values[0]}" 
                      Name="DecimalTB"
                      KeyDown="DecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -345,8 +350,8 @@
                      HorizontalContentAlignment="Center"
                      VerticalContentAlignment="Center"
                      LostFocus="DecimalTB_OnLostFocus"/>
-            <TextBlock Text="{Binding Model.Hex_Resources}" FontFamily="Consolas" Margin="255,-49,0,0"/>
-            <TextBox Text="{Binding Model.Values[1]}" 
+      <TextBlock Text="{Binding Model.Hex_Resources}" FontFamily="Consolas" Margin="255,-49,0,0"/>
+      <TextBox Text="{Binding Model.Values[1]}" 
                      Name="SignedDecimalTB"
                      KeyDown="SignedDecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -362,7 +367,7 @@
                      Height="35"
                      Visibility="Collapsed"
                      LostFocus="SignedDecimalTB_OnLostFocus"/>
-            <TextBox Text="{Binding Model.Values[2]}"
+      <TextBox Text="{Binding Model.Values[2]}"
                      Name="HexadecimalTB"
                      KeyDown="HexadecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -377,8 +382,8 @@
                      UseLayoutRounding="False" 
                      Height="35"
                      LostFocus="HexadecimalTB_OnLostFocus"/>
-            <TextBlock Text="{Binding Model.Bin_Resources}" FontFamily="Consolas" Margin="460,-49,0,0"/>
-            <TextBox Text="{Binding Model.Values[3]}" 
+      <TextBlock Text="{Binding Model.Bin_Resources}" FontFamily="Consolas" Margin="460,-49,0,0"/>
+      <TextBox Text="{Binding Model.Values[3]}" 
                      Name="BinaryTB"
                      KeyDown="BinaryTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -393,8 +398,8 @@
                      HorizontalAlignment="Left" 
                      Height="35"
                      LostFocus="BinaryTB_OnLostFocus"/>
-            <TextBlock Text="{Binding Model.COT_Resources}" FontFamily="Consolas" Margin="0,10,0,0"/>
-            <TextBox Text="{Binding Model.CotValue}" 
+      <TextBlock Text="{Binding Model.COT_Resources}" FontFamily="Consolas" Margin="0,10,0,0"/>
+      <TextBox Text="{Binding Model.CotValue}" 
                      Name="CotValue"
                      TextWrapping="Wrap" 
                      Width="100" 
@@ -406,7 +411,7 @@
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
                      Height="35"/>
-            <TextBox Text="{Binding Model.CotMessage}" 
+      <TextBox Text="{Binding Model.CotMessage}" 
                      Name="CotMessage"
                      TextWrapping="Wrap" 
                      FontFamily="Consolas"
@@ -417,7 +422,7 @@
                      Width="1023"
                      HorizontalAlignment="Left" 
                      Height="35"/>
-            <TextBox Text="{Binding Model.ErrorMsg}" 
+      <TextBox Text="{Binding Model.ErrorMsg}" 
                BorderThickness="0"
                Name="ErrorMessage"
                TextWrapping="Wrap" 
@@ -430,6 +435,6 @@
                HorizontalAlignment="Left" 
                Height="24" 
                Foreground="Red"/>
-        </StackPanel>
-    </Grid>
+    </StackPanel>
+  </Grid>
 </Window>

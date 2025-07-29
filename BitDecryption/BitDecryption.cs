@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace BitDecryption
 {
-    public class BitDecryption
+  public class BitDecryption
   {
     private string binary;
     private string hex;
@@ -77,92 +77,92 @@ namespace BitDecryption
           dec = Convert.ToString(unsignedDecValue & 0xffffffff);
           hex = Convert.ToString((long)unsignedDecValue & 0xffffffff, 16);
           binary = Convert.ToString((long)unsignedDecValue & 0xffffffff, 2).PadLeft(32, '0');
-                    break;
+          break;
         case Bitness.Bit64:
           dec = Convert.ToString(unsignedDecValue);
           hex = Convert.ToString((long)unsignedDecValue, 16);
           binary = Convert.ToString((long)unsignedDecValue, 2).PadLeft(64, '0');
-                    break;
+          break;
       }
       List<string> values = new List<string>() { dec, signedDec, hex, binary };
       return FormatString(values);
     }
 
-        //Update all Values from selected Checkboxes
-        private Int64 addToNumber(IList items, List<string> allStatusbits, Bitness bit)
-        {
-            IEnumerator item = items.GetEnumerator();
-
-            Int64 dec = 0;
-            int index;
-            string currentItem;
-            for (int i = 0; i < items.Count; i++)
-            {
-                item.MoveNext();
-
-                currentItem = item.Current.ToString();
-                index = (int)bit - 1 - allStatusbits.IndexOf(currentItem);
-                dec += (Int64)Math.Pow(2, index);
-            }
-            return dec;
-        }
-        //Update all Values from selected Checkboxes
-        public List<string> CalculateFromCheckBoxes(IList items1, IList items2, IList items3, IList items4, IList items5, IList items6, IList items7, IList items8, List<string> allStatusbits, Bitness bit)
-        {
-
-            Int64 decimalNumber = 0;
-
-
-            decimalNumber = addToNumber(items1, allStatusbits, bit) + addToNumber(items2, allStatusbits, bit) + addToNumber(items3, allStatusbits, bit) + addToNumber(items4, allStatusbits, bit) + addToNumber(items5, allStatusbits, bit) + addToNumber(items6, allStatusbits, bit) + addToNumber(items7, allStatusbits, bit) + addToNumber(items8, allStatusbits, bit);
-
-            List<string> values = new List<string>();
-            values = CalculateFromBase(decimalNumber.ToString(), bit, BaseType.Decimal);
-            return values;
-        }
-
-        public void CalculateActiveCheckboxes(List<string> allStatusBits, IList items8, IList items7, IList items6, IList items5, IList items4, IList items3, IList items2, IList items1, string number, Bitness bit, BaseType baseType)
+    //Update all Values from selected Checkboxes
+    private Int64 addToNumber(IList items, List<string> allStatusbits, Bitness bit)
     {
-          for (int i = items8.Count - 1; i >= 0; i--)
-          {
-            items8.RemoveAt(i);
-          }
+      IEnumerator item = items.GetEnumerator();
 
-        for (int i = items7.Count - 1; i >= 0; i--)
-        {
-            items7.RemoveAt(i);
-        }
+      Int64 dec = 0;
+      int index;
+      string currentItem;
+      for (int i = 0; i < items.Count; i++)
+      {
+        item.MoveNext();
 
-        for (int i = items6.Count - 1; i >= 0; i--)
-        {
-            items6.RemoveAt(i);
-        }
+        currentItem = item.Current.ToString();
+        index = (int)bit - 1 - allStatusbits.IndexOf(currentItem);
+        dec += (Int64)Math.Pow(2, index);
+      }
+      return dec;
+    }
+    //Update all Values from selected Checkboxes
+    public List<string> CalculateFromCheckBoxes(IList items1, IList items2, IList items3, IList items4, IList items5, IList items6, IList items7, IList items8, List<string> allStatusbits, Bitness bit)
+    {
 
-        for (int i = items5.Count - 1; i >= 0; i--)
-        {
-            items5.RemoveAt(i);
-        }
+      Int64 decimalNumber = 0;
 
-        for (int i = items4.Count - 1; i >= 0; i--)
-        {
-            items4.RemoveAt(i);
-        }
 
-        for (int i = items3.Count - 1; i >= 0; i--)
-        {
-            items3.RemoveAt(i);
-        }
+      decimalNumber = addToNumber(items1, allStatusbits, bit) + addToNumber(items2, allStatusbits, bit) + addToNumber(items3, allStatusbits, bit) + addToNumber(items4, allStatusbits, bit) + addToNumber(items5, allStatusbits, bit) + addToNumber(items6, allStatusbits, bit) + addToNumber(items7, allStatusbits, bit) + addToNumber(items8, allStatusbits, bit);
 
-        for (int i = items2.Count - 1; i >= 0; i--)
-        {
-            items2.RemoveAt(i);
-        }
+      List<string> values = new List<string>();
+      values = CalculateFromBase(decimalNumber.ToString(), bit, BaseType.Decimal);
+      return values;
+    }
 
-        for (int i = items1.Count - 1; i >= 0; i--)
-        {
-            items1.RemoveAt(i);
-        }
+    public void CalculateActiveCheckboxes(List<string> allStatusBits, IList items8, IList items7, IList items6, IList items5, IList items4, IList items3, IList items2, IList items1, string number, Bitness bit, BaseType baseType)
+    {
+      for (int i = items8.Count - 1; i >= 0; i--)
+      {
+        items8.RemoveAt(i);
+      }
 
-        if (string.IsNullOrEmpty(number))
+      for (int i = items7.Count - 1; i >= 0; i--)
+      {
+        items7.RemoveAt(i);
+      }
+
+      for (int i = items6.Count - 1; i >= 0; i--)
+      {
+        items6.RemoveAt(i);
+      }
+
+      for (int i = items5.Count - 1; i >= 0; i--)
+      {
+        items5.RemoveAt(i);
+      }
+
+      for (int i = items4.Count - 1; i >= 0; i--)
+      {
+        items4.RemoveAt(i);
+      }
+
+      for (int i = items3.Count - 1; i >= 0; i--)
+      {
+        items3.RemoveAt(i);
+      }
+
+      for (int i = items2.Count - 1; i >= 0; i--)
+      {
+        items2.RemoveAt(i);
+      }
+
+      for (int i = items1.Count - 1; i >= 0; i--)
+      {
+        items1.RemoveAt(i);
+      }
+
+      if (string.IsNullOrEmpty(number))
       {
         number = "0";
       }
@@ -180,40 +180,40 @@ namespace BitDecryption
       {
         if (unsignedDecValue % 2 == 1)
         {
-            switch (index / 8)
-            {
-                case (0):
-                    items1.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+          switch (index / 8)
+          {
+            case (0):
+              items1.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (1):
-                    items2.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+            case (1):
+              items2.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (2):
-                    items3.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+            case (2):
+              items3.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (3):
-                    items4.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+            case (3):
+              items4.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (4):
-                    items5.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+            case (4):
+              items5.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (5):
-                    items6.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+            case (5):
+              items6.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (6):
-                    items7.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
+            case (6):
+              items7.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
 
-                case (7):
-                    items8.Add(allStatusBits[(int)bit - 1 - index]);
-                    break;
-            }
+            case (7):
+              items8.Add(allStatusBits[(int)bit - 1 - index]);
+              break;
+          }
         }
 
         index++;
@@ -269,5 +269,5 @@ namespace BitDecryption
 
       return values;
     }
-    }
+  }
 }

@@ -18,7 +18,7 @@ namespace Statusbits.Controller
         ResourceManager resource;
 
         private Dictionary<string, BitDecryption.BitDecryption.BaseType> baseTypeHelper;
-        public StatusbitsController(int bits, string version = "1000")
+        public StatusbitsController(int bits, string version = "1600")
         {
             CalculateBits = new BitDecryption.BitDecryption();
             Model = new StatusbitsModel();

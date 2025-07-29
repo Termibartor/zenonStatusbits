@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Lucas.Walkner\source\Statusbits_final\Statusbits\Statusbits\obj\Debug\net6.0-windows\
+C:\Users\Tobias.Halwax\Source\Repos\zenonStatusbits\Statusbits\obj\Debug\net6.0-windows\
 Statusbits
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Lucas.Walkner\source\Statusbits_final\Statusbits\Statusbits\App.xaml
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\Tobias.Halwax\Source\Repos\zenonStatusbits\Statusbits\App.xaml
 11407045341
 
 6695807315
-204-568806083
+204-928244250
 MainWindow.xaml;
 
 False
