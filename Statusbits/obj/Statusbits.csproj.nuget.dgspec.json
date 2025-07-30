@@ -4,12 +4,12 @@
     "C:\\Users\\Tobias.Halwax\\Source\\Repos\\zenonStatusbits\\Statusbits\\Statusbits.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tobias.Halwax\\source\\repos\\zenonStatusbits\\BitDecryption\\BitDecryption.csproj": {
+    "C:\\Users\\Tobias.Halwax\\Source\\Repos\\zenonStatusbits\\BitDecryption\\BitDecryption.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tobias.Halwax\\source\\repos\\zenonStatusbits\\BitDecryption\\BitDecryption.csproj",
+        "projectUniqueName": "C:\\Users\\Tobias.Halwax\\Source\\Repos\\zenonStatusbits\\BitDecryption\\BitDecryption.csproj",
         "projectName": "BitDecryption",
-        "projectPath": "C:\\Users\\Tobias.Halwax\\source\\repos\\zenonStatusbits\\BitDecryption\\BitDecryption.csproj",
+        "projectPath": "C:\\Users\\Tobias.Halwax\\Source\\Repos\\zenonStatusbits\\BitDecryption\\BitDecryption.csproj",
         "packagesPath": "C:\\Users\\Tobias.Halwax\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Tobias.Halwax\\source\\repos\\zenonStatusbits\\BitDecryption\\obj\\",
         "projectStyle": "PackageReference",

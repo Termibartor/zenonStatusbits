@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© Ing. Punzenberger COPA-DATA GmbH")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8ee4eec1fd44384ce28d0b8ef238053bb0d1e7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+596fb64e6f8a3431b5e82ca31b0b5005eff2df66")]
 [assembly: System.Reflection.AssemblyProductAttribute("Statusbits")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Statusbits")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="0" xml:space="preserve">
-    <value>M1400</value>
+    <value>M1</value>
   </data>
   <data name="1" xml:space="preserve">
     <value>M2</value>
@@ -274,7 +274,7 @@
     <value>T_DEV</value>
   </data>
   <data name="56" xml:space="preserve">
-    <value>RES56</value>
+    <value>GAP_REC</value>
   </data>
   <data name="57" xml:space="preserve">
     <value>RES57</value>
